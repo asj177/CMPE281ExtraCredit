@@ -57,7 +57,7 @@ exports.GumballAction = function(req, res) {
 	var diff=((now-ts)/1000);
 	hash2=getHash(state,ts);
 	if(diff>120 || hash1!=hash2){
-		error(req,res,"********Session Invalid********");
+	res.send("************Invalid Session*************************");
 	}
 	
 
